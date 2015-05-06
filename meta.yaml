@@ -1,8 +1,9 @@
 {%set build = 0 %}
+{%set version = '2014.1' %}
 
 package:
   name: pycuda
-  version: !!str 2014.1
+  version: {{version}}
 
 about:
   home: http://mathema.tician.de/software/pycuda
@@ -10,8 +11,8 @@ about:
   summary: "Python wrapper for NVIDIA CUDA."
 
 source:
-  fn: pycuda-2014.1.tar.gz
-  url: https://pypi.python.org/packages/source/p/pycuda/pycuda-2014.1.tar.gz
+  fn: pycuda-{{version}}.tar.gz
+  url: https://pypi.python.org/packages/source/p/pycuda/pycuda-{{version}}.tar.gz
   md5: fdc2f59e57ab7256a7e0df0d9d943022
 
 requirements:
@@ -31,7 +32,7 @@ requirements:
 
 build:
   number: {{build}}
-  string: py{{py}}_cuda65_{{build}}
+  string: np{{np}}py{{py}}_cuda65_{{build}}
   preserve_egg_dir: yes
   script:
     - python configure.py --cuda-root=/usr/local/cuda/

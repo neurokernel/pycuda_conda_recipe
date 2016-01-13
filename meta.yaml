@@ -32,7 +32,7 @@ requirements:
 
 build:
   number: {{build}}
-  string: np{{np}}py{{py}}_cuda70_{{build}}
+  string: np{{np}}py{{py}}_cuda75_{{build}}
   preserve_egg_dir: yes
   script:
     - python configure.py --cuda-root=/usr/local/cuda/

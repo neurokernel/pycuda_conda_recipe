@@ -1,5 +1,5 @@
 {%set build = 0 %}
-{%set version = '2015.1.3' %}
+{%set version = '2016.1' %}
 
 package:
   name: pycuda
@@ -13,22 +13,22 @@ about:
 source:
   fn: pycuda-{{version}}.tar.gz
   url: https://pypi.python.org/packages/source/p/pycuda/pycuda-{{version}}.tar.gz
-  md5: 1b3e1d0d7e23b19027ce4b79475233b7
+  md5: 96e50fd4b079d4f6e8bd1bd2207ca48d
 
 requirements:
   build:
-    - 'decorator >=3.2.0'
+    - decorator >=3.2.0
     - numpy
-    - 'pytest >=2'
+    - pytest >=2
     - python
-    - pytools
+    - pytools >=2011.2
     - setuptools
 
   run:
-    - 'decorator >=3.2.0'
+    - decorator >=3.2.0
     - numpy
     - python
-    - pytools
+    - pytools >=2011.2
 
 build:
   number: {{build}}
